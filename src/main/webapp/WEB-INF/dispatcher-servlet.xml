@@ -43,5 +43,18 @@
 		</property>
 		<property name="defaultContentType" value="application/json" />
 	</beans:bean>
-	<beans:bean name="solver" class="com.fishteam.checkers.solvers.BFSProblemSolver" />
+	<beans:bean class="java.util.HashMap" name="gameMap">
+	</beans:bean>
+	<beans:bean class="java.util.HashMap" name="solverMap">
+		<beans:constructor-arg>
+			<beans:map>
+				<beans:entry key="BFS" value-ref="BFSsolver" />
+				<beans:entry key="DFS" value-ref="DFSsolver" />
+			</beans:map>
+		</beans:constructor-arg>
+	</beans:bean>
+	<beans:bean name="BFSsolver"
+		class="com.fishteam.checkers.solvers.BFSProblemSolver" />
+	<beans:bean name="DFSsolver"
+		class="com.fishteam.checkers.solvers.DFSProblemSolver" />
 </beans:beans>
