@@ -3,3 +3,6 @@
 *.iml
 
 /target/
+target/classes/com/fishteam/checkers/interfaces/Problem.class
+target/classes/com/fishteam/checkers/interfaces/Problem.class
+*.class

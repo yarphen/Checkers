@@ -2,8 +2,8 @@ package com.fishteam.checkers.logics;
 
 public class Action {
 	private String id;
-	private int x,y;
-	private int checkerState;
+	private Integer x,y;
+	private Integer checkerState;
 	private String algorythm;
 	public String getId() {
 		return id;
