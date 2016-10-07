@@ -3,8 +3,8 @@ package com.fishteam.checkers.logics;
 import com.fishteam.checkers.interfaces.ProblemState;
 
 public class GameState implements ProblemState {
-	private Checker mainChecker;
-	private Board board;
+	private Checker mainChecker = new Checker();
+	private Board board = new Board();
 	public Checker getMainChecker() {
 		return mainChecker;
 	}

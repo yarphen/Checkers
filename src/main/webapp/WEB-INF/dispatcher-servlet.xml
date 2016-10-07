@@ -43,15 +43,17 @@
 		</property>
 		<property name="defaultContentType" value="application/json" />
 	</beans:bean>
-	<beans:bean class="java.util.HashMap" name="gameMap">
-	</beans:bean>
-	<beans:bean class="java.util.HashMap" name="solverMap">
-		<beans:constructor-arg>
+	<beans:bean class="com.fishteam.checkers.logics.MapContainerImpl">
+		<beans:property name="gameMap">
+			<beans:bean class="java.util.HashMap" name="gameMap">
+			</beans:bean>
+		</beans:property>
+		<beans:property name="solverMap">
 			<beans:map>
 				<beans:entry key="BFS" value-ref="BFSsolver" />
 				<beans:entry key="DFS" value-ref="DFSsolver" />
 			</beans:map>
-		</beans:constructor-arg>
+		</beans:property>
 	</beans:bean>
 	<beans:bean name="BFSsolver"
 		class="com.fishteam.checkers.solvers.BFSProblemSolver" />
