@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<html>
-<body>
-<h2>Hello World!</h2>
-</body>
-</html>
-=======
 <html>
 <head>
 <script
@@ -37,4 +30,4 @@
 	</div>
 </body>
 </html>
->>>>>>> branch 'master' of https://github.com/yarphen/Checkers.git
+
