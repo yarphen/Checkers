@@ -43,5 +43,6 @@
 		</property>
 		<property name="defaultContentType" value="application/json" />
 	</beans:bean>
-	<beans:bean name="solver" class="com.fishteam.checkers.solvers.BFSProblemSolver" />
+	<beans:bean name="bfs_solver" class="com.fishteam.checkers.solvers.BFSProblemSolver" />
+	<beans:bean name="dfs_solver" class="com.fishteam.checkers.solvers.DFSProblemSolver" />
 </beans:beans>
