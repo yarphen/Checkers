@@ -7,4 +7,5 @@ public interface Problem {
 	ProblemState getGoalState();
 	List<ProblemState> getChildren(ProblemState father);
 	List<ProblemState> getFathers(ProblemState child);
+	int getWeight(ProblemState selected);
 }

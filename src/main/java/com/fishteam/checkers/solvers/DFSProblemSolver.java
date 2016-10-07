@@ -1,9 +1,11 @@
 package com.fishteam.checkers.solvers;
+
 import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
 
-import com.fishteam.pacman.interfaces.*;
+
+import com.fishteam.checkers.interfaces.*;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -19,7 +21,7 @@ public class DFSProblemSolver implements ProblemSolver{
 	}
 	private List<ProblemState> findFromHead(ProblemState current, Function<ProblemState, List<ProblemState>> childFunction, Set<ProblemState> visited, ProblemState goal){
 		if (current.equals(goal)){
-			LinkedList<ProblemState> result = new LinkedList<>();
+			LinkedList<ProblemState> result = new LinkedList<ProblemState>();
 			result.add(current);
 			return result;
 		}
