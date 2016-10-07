@@ -20,8 +20,65 @@ body {
 
 .game {
 	padding: 10px;
+	display: inline-block;
 }
-
+.column{
+	position: relative;
+	width: 150px;
+	height: 800px;
+	border: 3px solid aqua;
+	display: inline-block;
+	vertical-align: top;
+	pointer-events: none;
+}
+.active-column{
+	border-color: white;
+	pointer-events: all;
+}
+.active-column > .column-footer{
+	color: white;
+}
+.game-container{
+	
+}
+.circle-tool{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	margin: 15px;
+}
+.black{
+	background-color: black;
+}
+.white{
+	background-color: white;
+}
+.grey-and-red{
+	background-color: gray;
+	color: red;
+	font-size: 100px;
+	text-align: center;
+}
+.text-tool{
+	padding-top: 30px;
+	font-size: 50px;
+	font-family: sans-serif;
+}
+.column-footer{
+	text-align: center;
+	font-size: 50px;
+	font-weight: 900;
+	position: absolute;
+	margin: 50px;
+	bottom: 0px;
+	color: red;
+}
+.filled{
+	color: aqua;
+}
+.column-container{
+	display: inline-block;
+}
 .title {
 	font-size: 3rem;
 	color: #ffe799;
@@ -47,21 +104,6 @@ body {
 }
 
 * {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.layer-wrapper {
-	position: relative;
-	height: 800px;
-}
-
-.layer {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	float: left;
-	vertical-align: middle;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
