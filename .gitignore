@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .idea/
 
 *.iml
@@ -6,3 +7,13 @@
 target/classes/com/fishteam/checkers/interfaces/Problem.class
 target/classes/com/fishteam/checkers/interfaces/Problem.class
 *.class
+=======
+.idea/
+
+*.iml
+
+/target/
+target/classes/com/fishteam/checkers/interfaces/Problem.class
+target/classes/com/fishteam/checkers/interfaces/Problem.class
+*.class
+>>>>>>> branch 'master' of https://github.com/yarphen/Checkers.git

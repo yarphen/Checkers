@@ -1,3 +1,4 @@
+
 package com.fishteam.checkers.logics;
 
 import java.util.LinkedList;
@@ -11,8 +12,8 @@ import com.fishteam.checkers.interfaces.ProblemSolver;
 import com.fishteam.checkers.interfaces.ProblemState;
 
 public class Game implements Problem{
-	private GameState startState;
-	private GameState goalState;
+	private GameState startState = new GameState();
+	private GameState goalState = new GameState();
 	private String id = new Random().nextLong()+"";
 	public Way solveWith(ProblemSolver problemSolver) {
 		Way way = new Way();

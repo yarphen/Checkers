@@ -1,8 +1,10 @@
+
 package com.fishteam.checkers.solvers;
 
 import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
+
 
 import com.fishteam.checkers.interfaces.*;
 
