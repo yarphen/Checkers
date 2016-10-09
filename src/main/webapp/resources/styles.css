@@ -110,6 +110,10 @@ body {
 #duration{
 	width: 80px;
 }
+#choose-greedy{
+	padding-top: 20px;
+	font-size: 15px;
+}
 * {
 	font-family: sans-serif;
 	-moz-box-sizing: border-box;
