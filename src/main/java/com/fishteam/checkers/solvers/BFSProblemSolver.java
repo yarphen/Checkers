@@ -87,11 +87,11 @@ public class BFSProblemSolver implements ProblemSolver{
 					Node newNode = new Node(node);
 					newNode.state = state;
 					node.children.add(newNode);
-					if (state.equals(goal)){
+					if (state.simpleEquals(goal)){
 						return newNode;
 					}else{
 						visited.add(state);
-						System.out.println(state);
+//						System.out.println(state);
 						children.add(newNode);
 					}
 				}
