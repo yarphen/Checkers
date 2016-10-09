@@ -4,7 +4,7 @@ public class Action {
 	private String id;
 	private Integer x,y;
 	private Integer checkerState;
-	private String algorythm;
+	private String algorithm;
 	public String getId() {
 		return id;
 	}
@@ -29,11 +29,16 @@ public class Action {
 	public void setCheckerState(int checkerState) {
 		this.checkerState = checkerState;
 	}
-	public String getAlgorythm() {
-		return algorythm;
+	public String getAlgorithm() {
+		return algorithm;
 	}
-	public void setAlgorythm(String algorythm) {
-		this.algorythm = algorythm;
+	public void setAlgorithm(String algorithm) {
+		this.algorithm = algorithm;
+	}
+	@Override
+	public String toString() {
+		return "Action [id=" + id + ", x=" + x + ", y=" + y + ", checkerState=" + checkerState + ", algorithm="
+				+ algorithm + "]";
 	}
 	
 }
