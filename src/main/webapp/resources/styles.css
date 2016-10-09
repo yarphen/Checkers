@@ -101,7 +101,15 @@ body {
 	text-align: center;
 }
 
-
+.duration-spinner{
+	margin: 20px;
+	color: aqua;
+	font-size: 2rem;
+	text-align: center;
+}
+#duration{
+	width: 80px;
+}
 * {
 	font-family: sans-serif;
 	-moz-box-sizing: border-box;
