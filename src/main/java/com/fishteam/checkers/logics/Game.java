@@ -60,7 +60,8 @@ public class Game implements Problem{
 		});
 		functions.forEach(new Consumer<Function<Point, Point>>() {
 			public void accept(Function<Point, Point> t) {
-				children.add(createGameState(t, state));
+				GameState st = createGameState(t, state);
+				if (st != null)children.add(st);
 			}
 		});
 		return children;
@@ -75,9 +76,7 @@ public class Game implements Problem{
 			gameState.getMainChecker().setLocation(point);
 			return gameState;
 		}else{
-			if (current
-					.getBoard()
-					.getCell(point.getX(), point.getY())
+			if (current.getBoard().getCell(point.getX(), point.getY())
 					==
 					Board.oppositeSide(current
 							.getMainChecker()
