@@ -41,6 +41,9 @@
 						<div id="choose-bfs"
 							class="circle-tool grey-and-red text-tool active-tool" title="Press to select BFS algorithm">BFS</div>
 						<div id="choose-dfs" class="circle-tool grey-and-red text-tool" title="Press to select DFS algorithm">DFS</div>
+						<div id="choose-astar"
+							class="circle-tool grey-and-red text-tool" title="Press to select A-star algorithm">A*</div>
+						<div id="choose-greedy" class="circle-tool grey-and-red text-tool" title="Press to select Greedy algorithm">Greedy</div>
 						<div id="column4-submit" class="column-footer text-column-footer" title="PRESS TO FIND THE WAY" title="Press to start">GO!</div>
 					</div>
 				</div>
