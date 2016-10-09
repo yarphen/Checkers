@@ -52,12 +52,18 @@
 			<beans:map>
 				<beans:entry key="BFS" value-ref="BFSsolver" />
 				<beans:entry key="DFS" value-ref="DFSsolver" />
+				<beans:entry key="AStar" value-ref="AStarSolver" />
+				<beans:entry key="Greedy" value-ref="GreedySolver" />
 			</beans:map>
 		</beans:property>
 	</beans:bean>
 	<beans:bean name="BFSsolver"
-		class="com.fishteam.checkers.solvers.BFSProblemSolver" />
+		class="com.fishteam.checkers.solvers.BFSProblemSolverV2" />
 	<beans:bean name="DFSsolver"
-		class="com.fishteam.checkers.solvers.DFSProblemSolver" />
+		class="com.fishteam.checkers.solvers.DFSProblemSolverV2" />
+	<beans:bean name="AStarSolver"
+		class="com.fishteam.checkers.solvers.AStarProblemSolver" />
+	<beans:bean name="GreedySolver"
+		class="com.fishteam.checkers.solvers.GreedyProblemSolver" />
 </beans:beans>
 
