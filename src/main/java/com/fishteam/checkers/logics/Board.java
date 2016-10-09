@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 
 public class Board {
+	public static final int NOT_EXISTS = -1;
 	public static final int NONE = 0;
 	public static final int BLACK = 1;
 	public static final int WHITE = 2;
@@ -12,8 +13,14 @@ public class Board {
 	 * Fill it according to constants NONE/BLACK/WHITE
 	 */
 	private int [][] cells = new int[SIZE][SIZE];
+	public int[][] getCells() {
+		return cells;
+	}
+	public void setCells(int[][] cells) {
+		this.cells = cells;
+	}
 	public int getCell(int x, int y){
-		return cells[x][y];
+		return (exists(x,y))?cells[x][y]:NOT_EXISTS;
 	}
 	public void setCell(int x, int y, int cellState){
 		switch (cellState) {
@@ -21,17 +28,18 @@ public class Board {
 		case BLACK:
 		case WHITE:
 			cells[x][y]=cellState;
+			break;
 		default:
 			throw new IllegalArgumentException();
 		}
 	}
 	public boolean isOpened(int x, int y){
-        return exists(x,y) && cells[y][x]==NONE;
+        return getCell(x,y)==NONE;
     }
 
     /** Check if cell exists */
     private boolean exists(int x, int y){
-        return !(x < 0 || y < 0 || y > cells.length-1 || x > cells[y].length-1 );
+        return !(x < 0 || y < 0 || x > SIZE-1 || y > SIZE-1 );
     }
 
     
@@ -81,6 +89,19 @@ public class Board {
 		return true;
 	}
 	public static int oppositeSide(boolean color) {
-		return color?1:0;
+		return color?2:1;
+	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		for(int i=0; i<SIZE; i++){
+        	for(int j=0; j<SIZE; j++){
+        		builder.append(cells[i][j]);
+        	}
+    		if (i!=SIZE-1){
+    			builder.append("\r\n");
+    		}
+    	}
+		return builder.toString();
 	}
 }
