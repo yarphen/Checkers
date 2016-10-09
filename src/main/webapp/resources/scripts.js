@@ -13,6 +13,8 @@ $(document).ready(function(){
 	var mainchecker = $('#main-checker');
 	var bfs = $('#choose-bfs');
 	var dfs = $('#choose-dfs');
+	var astar = $('#choose-astar');
+	var greedy = $('#choose-greedy');
 	var duration = $('#duration');
 	duration.change(function(){
 		theGameState.duration = duration.val();
@@ -127,10 +129,28 @@ $(document).ready(function(){
 		theGameState.algorithm='BFS';
 		bfs.addClass('active-tool');
 		dfs.removeClass('active-tool');
+		astar.removeClass('active-tool');
+		greedy.removeClass('active-tool');
 	});
 	dfs.click(function(){
 		theGameState.algorithm='DFS';
 		dfs.addClass('active-tool');
+		bfs.removeClass('active-tool');
+		astar.removeClass('active-tool');
+		greedy.removeClass('active-tool');
+	});
+	astar.click(function(){
+		theGameState.algorithm='AStar';
+		astar.addClass('active-tool');
+		greedy.removeClass('active-tool');
+		dfs.removeClass('active-tool');
+		bfs.removeClass('active-tool');
+	});
+	greedy.click(function(){
+		theGameState.algorithm='Greedy';
+		greedy.addClass('active-tool');
+		astar.removeClass('active-tool');
+		dfs.removeClass('active-tool');
 		bfs.removeClass('active-tool');
 	});
 	function createAction(sample){
